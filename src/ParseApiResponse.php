@@ -30,13 +30,13 @@ class ParseApiResponse
         try {
             // Get data
             $statusSign = data_get($data, 1);
-            $sended = isset($statusSign) && $statusSign == '+';
+            $sent = isset($statusSign) && $statusSign == '+';
             $responseCode = data_get($data, 2);
             $responseMessage = data_get($data, 3);
 
             $response  = [
-                'sended' => $sended,
-                'message' => (string) Str::of($responseMessage)->trim(),
+                'sent' => $sent,
+                'response' => (string) Str::of($responseMessage)->trim(),
                 'code' => $responseCode,
             ];
         } catch (Exception $e) {

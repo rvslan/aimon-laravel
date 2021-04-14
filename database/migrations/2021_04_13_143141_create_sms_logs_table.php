@@ -17,7 +17,8 @@ class CreateSmsLogsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('code');
-            $table->boolean('sended');
+            $table->boolean('sent');
+            $table->string('response');
             $table->string('message');
             $table->unsignedBigInteger('user_id');
 

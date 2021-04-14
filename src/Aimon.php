@@ -45,9 +45,10 @@ class Aimon
 
             if (config('aimon.database.enabled') && $userId) {
                 SmsLog::create([
-                    'sended' => data_get($smsResponse, 'sended'),
+                    'sent' => data_get($smsResponse, 'sent'),
                     'code' => data_get($smsResponse, 'code'),
-                    'message' => data_get($smsResponse, 'message'),
+                    'response' => data_get($smsResponse, 'response'),
+                    'message' => $smsText,
                     'user_id' => $userId,
                 ]);
             }
