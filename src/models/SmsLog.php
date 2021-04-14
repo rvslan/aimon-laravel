@@ -18,6 +18,7 @@ class SmsLog extends Model
     protected $fillable = [
         'sent',
         'code',
+        'message',
         'response',
         'user_id',
     ];
