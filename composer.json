@@ -1,6 +1,10 @@
 {
     "name": "rvslan/aimon-laravel",
     "description": "Laravel wrapper package for the Aimon.it API",
+    "keywords": [
+        "laravel",
+        "aimon"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -9,6 +13,7 @@
         }
     ],
     "require": {
+        "php": ">=7.1.0",
         "guzzlehttp/guzzle": "^7.3"
     },
     "autoload": {

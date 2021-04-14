@@ -1,5 +1,24 @@
-# aimon-laravel
-Laravel wrapper package for the Aimon.it API
+Laravel Aimon Package
+=====================
+
+A laravel wrapper package for the Aimon.it API.
+
+For more information see [Aimon](https://www.aimon.it/)
+
+[![License](https://poser.pugx.org/rvslan/aimon-laravel/license)](https://packagist.org/packages/rvslan/aimon-laravel) [![Total Downloads](https://poser.pugx.org/rvslan/aimon-laravel/downloads)](https://packagist.org/packages/rvslan/aimon-laravel) [![Coverage Status](https://coveralls.io/repos/github/rvslan/aimon-laravel/badge.svg)](https://coveralls.io/github/rvslan/aimon-laravel)
+
+
+## Requirements ##
+
+Laravel 6 or later
+
+
+Installation
+------------
+Installation is a quick 2 step process:
+
+1. Download aimon-laravel using composer
+2. Configure your Aimon credentials
 
 ### Step 1: Download aimon-laravel using composer
 
