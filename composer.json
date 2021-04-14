@@ -1,0 +1,26 @@
+{
+    "name": "rvslan/aimon-laravel",
+    "description": "Laravel wrapper package for the Aimon.it API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rvslan",
+            "email": "rvslan@protonmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rvslan\\Aimon\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rvslan\\Aimon\\AimonServiceProvider"
+            ]
+        }
+    }
+}
