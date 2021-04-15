@@ -2,8 +2,8 @@
 
 namespace Rvslan\Aimon;
 
+use Exception;
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Support\Facades\Log;
 use Rvslan\Aimon\Models\SmsLog;
 
@@ -48,13 +48,13 @@ class Aimon
                     'sent' => data_get($smsResponse, 'sent'),
                     'code' => data_get($smsResponse, 'code'),
                     'response' => data_get($smsResponse, 'response'),
-                    'message' => $smsText,
+                    'message' => $text,
                     'user_id' => $userId,
                 ]);
             }
 
             return true;
-        } catch (GuzzleException $e) {
+        } catch (Exception $e) {
             Log::error("Error during calling method {$method} - {$e->getMessage()}");
             return false;
         }
