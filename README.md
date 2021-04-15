@@ -1,5 +1,4 @@
-Laravel Aimon Package
-=====================
+# Laravel Aimon Package
 
 A laravel wrapper package for the Aimon.it API.
 
@@ -7,14 +6,12 @@ For more information see [Aimon](https://www.aimon.it/)
 
 [![License](https://poser.pugx.org/rvslan/aimon-laravel/license)](https://packagist.org/packages/rvslan/aimon-laravel) [![Total Downloads](https://poser.pugx.org/rvslan/aimon-laravel/downloads)](https://packagist.org/packages/rvslan/aimon-laravel) [![Coverage Status](https://coveralls.io/repos/github/rvslan/aimon-laravel/badge.svg)](https://coveralls.io/github/rvslan/aimon-laravel)
 
-
-## Requirements ##
+## Requirements
 
 Laravel 6 or later
 
+## Installation
 
-Installation
-------------
 Installation is a quick 2 step process:
 
 1. Download aimon-laravel using composer
@@ -27,7 +24,6 @@ Add rvslan/aimon-laravel by running the command:
 ```
 composer require rvslan/aimon-laravel
 ```
-
 
 ### Step 2: Configure Aimon credentials
 
@@ -44,8 +40,7 @@ AIMON_ID_API=your_id_api
 AIMON_DATABASE_LOG=true // set false if database log is not required
 ```
 
-Usage
------
+## Usage
 
 ```php
 <?php
@@ -55,4 +50,8 @@ $sms = app('aimon')->sendSms([
         'from' => 'Workgroup',
         'text' => 'Hello world',
     ]); // the second parameter is optional if database log is disabled
-````
+```
+
+## Documentation
+
+http://sms.aimon.it/documentazione_api/Documentazione_BCP_API.pdf
