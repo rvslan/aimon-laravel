@@ -20,14 +20,11 @@ class Aimon
         $from = data_get($params, 'from', null);
         $text = data_get($params, 'text', null);
 
-        // Encoding sms body
-        $smsText = html_entity_decode(htmlentities($text, ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'ISO-8859-1');
-
         try {
             $result = $client->post(self::BASE_URL . $method, [
                 'form_params' => [
                     "sender" => base64_encode($from),
-                    "body" => base64_encode($smsText),
+                    "body" => base64_encode(utf8_decode($text)),
                     "destination" => $to,
                     'authlogin' => config('aimon.auth.login') . '@aimon.it',
                     'authpasswd' => config('aimon.auth.password'),
